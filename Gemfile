@@ -38,18 +38,24 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'spork-rails', :github => 'sporkrb/spork-rails'
-gem 'guard-spork', '~> 1.5.1'
+
 gem 'selenium-webdriver', '~> 2.41.0'
+gem 'spork', '~> 1.0rc'
+
+
 group :development, :test do
+ gem 'guard-rspec'
+ gem 'guard-livereload'
+ gem 'spork-rails', github: 'sporkrb/spork-rails' # rubygems version not rails 4 compatible
+ gem 'guard-spork'
+ gem 'childprocess'
  gem 'rspec-rails', '~> 2.14.2'
 end
 
 group :test do
  gem 'cucumber-rails', '~> 1.4.0', require: false
  gem 'database_cleaner'
-  gem "factory_girl_rails"  
-  gem "capybara"  
-  gem "guard-rspec"  
-  gem 'gherkin', '~> 2.12.2'
+ gem "factory_girl_rails"  
+ gem "capybara"  
+ gem 'gherkin'
 end  
