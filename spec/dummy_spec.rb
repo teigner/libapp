@@ -1,3 +1,4 @@
+#Dummy Test
 require 'spec_helper'
 
 describe "dummy spec" do 
